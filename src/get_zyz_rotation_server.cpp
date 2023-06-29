@@ -9,6 +9,9 @@
 void rotate(const std::shared_ptr<apply_zyz_rotation::srv::GetZyzRotation::Request> request,
           std::shared_ptr<apply_zyz_rotation::srv::GetZyzRotation::Response>     response)
 {
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request\nz1: %f" " y: %f" " z2: %f",
+              request->z1, request->y, request->z2);
+  
   double z1 = (request->z1)*M_PI/180;	// recebe o valor em graus e converte em radianos
   double y = (request->y)*M_PI/180;
   double z2 = (request->z2)*M_PI/180;
@@ -27,9 +30,7 @@ void rotate(const std::shared_ptr<apply_zyz_rotation::srv::GetZyzRotation::Reque
   response->r[8] = cos(y);
 
   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "sending back response");
-  //RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request\na: %ld" " b: %ld",
-  //              request->a, request->b);
-  //RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "sending back response: [%ld]", (long int)response->sum);
+
 }
 
 int main(int argc, char **argv)
