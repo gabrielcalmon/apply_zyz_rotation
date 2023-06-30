@@ -4,7 +4,7 @@ This repository was developed to accomplish the proposed challenge of to get a r
 ## Introduction
 The sequence diagram of the solution is presented bellow:
 
-![banner](https://github.com/gabrielcalmon/apply_zyz_rotation/blob/master/resources/apply_zyz_rotarion_diag_sequencias.png?raw=true)
+![banner](https://github.com/gabrielcalmon/apply_zyz_rotation/blob/master/resources/apply_zyz_rotarion_diag_sequencia.png?raw=true)
 
 The srv structure, available on the srv/ folder, was created as follow:
 ```bash
